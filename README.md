@@ -52,25 +52,77 @@ There are many more parameters on Tachyon rendering that you can tune in VMD. To
 `Display > Display Settings > AO Ambient > 0.5`
 `Display > Display Settings > AO Direct > 0.5`
 
+It turns that that the material chosen affects the final visual effect the most. As AO rendering is highly recommended, a material that is fairly diffuse such as "Diffuse", or the AO-optimized "AOshiny", "AOChalky", or "AOEdgy" materials should be used.
+
 Ambient occlusion lighting can be enabled by `Display > Display Settings > Amb. Occl. > On`. Once ambient occlusion lighting was enabled, the effect can be adjusted by altering the "AO Ambient" and "AO Direct" coefficients, which scale the lighting contribution from the ambient light, and from the standard VMD lights, respectively. In most cases, an ambient light coefficient ranging from 0.7 to 1.0 and a direct lighting coefficient of 0.1 to 0.4 are most appropriate and yield the best results. A rule of thumb that tends to work well is that the sum of the two lighting coefficients should be near to 1.0. Personally, I would suggest to adjust from 0.5+0.5. Here are some examples:
 
 <img src="images/tachyon_2_bglass.png" width="200" /> <img src="images/tachyon_2_ambient8.png" width="200" /> <img src="images/tachyon_2_direct8.png" width="200" />
 
 Ambient 0.5 + Direct 0.5 (left) Ambient 0.8 + Direct 0.5 (middle) Ambient 0.5 + Direct 0.8 (right)
 
-### Shining light to your system
+<img src="images/tachyon_2_ao3.png" width="200" /> <img src="images/tachyon_2_ao8.png" width="200" /> 
+
+Ambient 0.3 + Direct 0.3 (left) Ambient 0.8 + Direct 0.8 (right)
+
+
+### Shining lights to your system
 
 I simply gave some simple options in order to have the following images:
 - -res 4096 2048
 - Display > Background > Gradient
 - Shadows ON, Amb. Occl. ON
+
 So we could focus on adjusting AO Ambient and AO Direct.
+
 Basically the rules are:
 - In most of the time just stick to the default value: 0.8 0.3
-    * Well I do not know why the default value in fact do not add up to have 1.0 but anyway it works fine for most cases.
+    * Well I do not know why the default values do not add up to have 1.0 but anyway it works fine for most cases.
 - If you think it is too dark, increase AO Direct by 0.1, e.g. 0.8 0.4.
 - If you think it is a little bit too bright after that, decrease AO Ambient by 0.2, e.g. 0.6 0.4.
 
 <img src="images/1400px-Unsym_last_vdw_now_0803_bg.bmp.png" width="200" /> <img src="images/1400px-Unsym_last_vdw_now_0804_bg.bmp.png" width="200" /> <img src="images/1400px-Unsym_last_vdw_now_0604_bg.bmp.png" width="200" />
 
+## Transparency
+
+A nice-looking transparent surface is the main reason for Tachyon rendering as it focuses on how lights penetrate different materials. Here are some images comparing Snapshots and Tachyon rendering of the same materials:
+
+<img src="images/snapshot_2_glass1.png" width="200" /> <img src="images/snapshot_2_glass2.png" width="200" /> <img src="images/snapshot_2_trans.png" width="200" />
+
+Snapshot: Glass 1 (left) Glass 2 (middle) Transparent (right)
+
+<img src="images/tachyon_2_glass1.png" width="200" /> <img src="images/tachyon_2_glass2.png" width="200" /> <img src="images/tachyon_2_trans.png" width="200" />
+
+Tachyon: Glass 1 (left) Glass 2 (middle) Transparent (right)
+
+You can see that the Tachyon images are different but not essentially better. But the materials `BrownGlass` and `GlassBubble` are what make things different. Usually you would like to emphasize some colors so I highly recommend `BrownGlass`. 
+
+<img src="images/tachyon_2_bglass.png" width="200" /> <img src="images/tachyon_2_gbubble.png" width="200" /> 
+
+BrownGlass (left) GlassBubble (right)
+
+## QuickSurf
+
+The very popular Drawing Method `QuickSurf` has some advantages over the conventional `Surf` and `MSMS`. It is much quicker (less costly) than `Surf` and does not require another software like `MSMS`. There are three parameters for `QuickSurf`: `Radius Scale`, `Density Isovalue` and `Grid Spacing`. A rule of thumb will be to start with 
+
+1. `Radius Scale`: 1.5
+2. `Density Isovalue`: 1.5
+3. `Grid Spacing`: 0.5
+
+`Grid Spacing=0.5` gives the most dramatic effect in quality as it increases the number of grids, i.e. higher resolution. The rest two parameters govern the size of the volume. I personally recommend adjusting `Radius Scale` because it is more straightforward, but also be awared that a large `Radius Scale` will easily crash VMD without any warning. 
+
+<img src="images/tachyon_2_radius1.png" width="200" /> <img src="images/tachyon_2_bglass.png" width="200" /> <img src="images/tachyon_2_radius2.png" width="200" />
+
+Radius 1.0 (left) Radius 1.5 (middle) Radius 2.0 (right)
+
+<img src="images/tachyon_2_bglass.png" width="200" /> <img src="images/tachyon_2_grid2.5.png" width="200" /> 
+
+Grid 0.5 (left) Grid 2.5 (right)
+
+Interestingly, `Surface Quality` is something I found relatively less obvious. 
+
+<img src="images/tachyon_2_bglass.png" width="200" /> <img src="images/tachyon_2_qualitylow.png" width="200" /> <img src="images/tachyon_2_qualitylow_2.png" width="200" />
+
+Quality Max (left) Quality Low (middle) Quality Low (right)
+
+## Depth Cueing
 
