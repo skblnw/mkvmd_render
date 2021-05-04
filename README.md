@@ -149,6 +149,22 @@ Depth of Focus (DoF) is an interesting effect. If you are familiar with cameras 
 
 # Archive
 
+Followings were steps of rendering:
+
+1. Load VMD state of the Molecule.
+2. Go to File -> Render -> Tachyon
+3. Use "tmp.dat" for Filename in the render window
+4. Modify Render Command in the render window as follows: 
+    * Windows: "C:\Program Files (x86)\University of Illinois\VMD\\tachyon_WIN32.exe" tmp.dat -format BMP -o path/to/your/image.bmp 
+    * Mac: "/Applications/VMD 1.9.1.app/Contents/vmd/tachyon_MACOSXX86" -aasamples 12 tmp.dat -format BMP -o path/to/your/image.bmp
+5. Start Rendering
+
+N.B. In fact it is okay to select your image path using the Browse bottom and leave the %s in the Render Command line. However I just do not like the way it left me a dat file.
+
+You should able to understand what has been done by VMD from the steps. Generally the VMD first renders the current scene to "test.dat" as a data file, then it uses the implemented program - "tachyon_WIN32.exe" or "tachyon_MACOSXX86" to read the data file and convert into a bmp. This is the trick from which we could make good images. Usually I use 2048x1024 which takes a little bit long time of rendering but provides more than enough resolution you need.
+
+You may manually set the resolution with a desirable one by adding option: -res XXXX XXXX (e.g. -res 2048 1024).
+
 ## Transparent surfaces
 
 If you have transparent surface, add this option: -trans_max_surfaces [1 to 5], it seems 1 work better. 
