@@ -56,4 +56,21 @@ Ambient occlusion lighting can be enabled by `Display > Display Settings > Amb. 
 
 <img src="images/tachyon_2_bglass.png" width="200" /> <img src="images/tachyon_2_ambient8.png" width="200" /> <img src="images/tachyon_2_direct8.png" width="200" />
 
-AO Ambient 0.5 + AO Direct 0.5 (left) AO Ambient 0.8 + AO Direct 0.5 (middle) AO Ambient 0.5 + AO Direct 0.8 (right)
+Ambient 0.5 + Direct 0.5 (left) Ambient 0.8 + Direct 0.5 (middle) Ambient 0.5 + Direct 0.8 (right)
+
+### Shining light to your system
+
+I simply gave some simple options in order to have the following images:
+- -res 4096 2048
+- Display > Background > Gradient
+- Shadows ON, Amb. Occl. ON
+So we could focus on adjusting AO Ambient and AO Direct.
+Basically the rules are:
+- In most of the time just stick to the default value: 0.8 0.3
+    * Well I do not know why the default value in fact do not add up to have 1.0 but anyway it works fine for most cases.
+- If you think it is too dark, increase AO Direct by 0.1, e.g. 0.8 0.4.
+- If you think it is a little bit too bright after that, decrease AO Ambient by 0.2, e.g. 0.6 0.4.
+
+<img src="images/1400px-Unsym_last_vdw_now_0803_bg.bmp.png" width="200" /> <img src="images/1400px-Unsym_last_vdw_now_0804_bg.bmp.png" width="200" /> <img src="images/1400px-Unsym_last_vdw_now_0604_bg.bmp.png" width="200" />
+
+
