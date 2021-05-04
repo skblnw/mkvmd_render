@@ -89,7 +89,7 @@ Basically the rules are:
 - If you think it is too dark, increase AO Direct by 0.1, e.g. 0.8 0.4.
 - If you think it is a little bit too bright after that, decrease AO Ambient by 0.2, e.g. 0.6 0.4.
 
-<img src="images/1400px-Unsym_last_vdw_now_0803_bg.bmp.png" width="200" /> <img src="images/1400px-Unsym_last_vdw_now_0804_bg.bmp.png" width="200" /> <img src="images/1400px-Unsym_last_vdw_now_0604_bg.bmp.png" width="200" />
+<img src="images/1400px-Unsym_last_vdw_now_0803_bg.bmp.png" width="300" /> <img src="images/1400px-Unsym_last_vdw_now_0804_bg.bmp.png" width="300" /> <img src="images/1400px-Unsym_last_vdw_now_0604_bg.bmp.png" width="300" />
 
 ## Transparency
 
@@ -145,7 +145,7 @@ Tachyon (left) GLSL+Snapshot (right)
 
 Depth of Focus (DoF) is an interesting effect. If you are familiar with cameras you should definitely try this out. `DoF Foc. Dist` should be close to `Screen Hgt`.
 
-<img src="images/tachyon_2_dof.png" width="300" />
+<img src="images/tachyon_2_dof.png" width="200" />
 
 # Archive
 
