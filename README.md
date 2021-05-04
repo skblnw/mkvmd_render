@@ -46,7 +46,7 @@ Snapshot in GLSL (left) Tachyon (right)
 
 I bet you can hardly tell the difference between two :)
 
-# More parameters
+# Advanced
 There are many more parameters on Tachyon rendering that you can tune in VMD. To only list a few, I will also try to integrate them with some actual examples. 
 
 ## Ambient Occlusion / Amb. Occl. / AO
