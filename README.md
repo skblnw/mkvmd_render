@@ -117,7 +117,7 @@ The very popular Drawing Method `QuickSurf` has some advantages over the convent
 2. `Density Isovalue`: 1.5
 3. `Grid Spacing`: 0.5
 
-`Grid Spacing=0.5` gives the most dramatic effect in quality as it increases the number of grids, i.e. higher resolution. The rest two parameters govern the size of the volume. I personally recommend adjusting `Radius Scale` because it is more straightforward, but also be awared that a large `Radius Scale` will easily crash VMD without any warning. 
+`Grid Spacing=0.5` gives the most dramatic effect in quality as it increases the number of grids, i.e. higher resolution. The rest two parameters govern the size of the volume. I personally recommend adjusting `Radius Scale` because it is more straightforward, but also be aware that a large `Radius Scale` will easily crash VMD without any warning. 
 
 <img src="images/tachyon_2_radius1.png" width="200" /> <img src="images/tachyon_2_bglass.png" width="200" /> <img src="images/tachyon_2_radius2.png" width="200" />
 
