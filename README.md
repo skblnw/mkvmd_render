@@ -38,4 +38,4 @@ Some additonal steps especially for rendering images involving transparent molec
 
 I found that BlownGlass under GLSL looks pretty nice so one can easily skip the Tachyon rendering, which is especially costly when dealing with transparent surfaces, and directly producing images with cheap Snapshots. 
 
-![alt text](images/snapshot_2_cue_linear.tga)
+![](images/snapshot_2_cue_linear.tga)
