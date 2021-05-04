@@ -39,6 +39,7 @@ Some additonal steps especially for rendering images involving transparent molec
 I found that BlownGlass under GLSL looks pretty nice so one can easily skip the Tachyon rendering, which is especially costly when dealing with transparent surfaces, and directly producing images with cheap Snapshots. 
 
 <img src="images/snapshot_2_cue_linear.png" width="200" /> <img src="images/tachyon_2_bglass.png" width="200" />
+
 Snapshot in GLSL (left) Tachyon (right)
 
 I bet you can hardly tell the difference between two :)
@@ -54,4 +55,5 @@ There are many more parameters on Tachyon rendering that you can tune in VMD. To
 Ambient occlusion lighting can be enabled by `Display > Display Settings > Amb. Occl. > On`. Once ambient occlusion lighting was enabled, the effect can be adjusted by altering the "AO Ambient" and "AO Direct" coefficients, which scale the lighting contribution from the ambient light, and from the standard VMD lights, respectively. In most cases, an ambient light coefficient ranging from 0.7 to 1.0 and a direct lighting coefficient of 0.1 to 0.4 are most appropriate and yield the best results. A rule of thumb that tends to work well is that the sum of the two lighting coefficients should be near to 1.0. Personally, I would suggest to adjust from 0.5+0.5. Here are some examples:
 
 <img src="images/tachyon_2_bglass.png" width="200" /> <img src="images/tachyon_2_ambient8.png" width="200" /> <img src="images/tachyon_2_direct8.png" width="200" />
+
 AO Ambient 0.5 + AO Direct 0.5 (left) AO Ambient 0.8 + AO Direct 0.5 (middle) AO Ambient 0.5 + AO Direct 0.8 (right)
