@@ -90,7 +90,7 @@ Basically the rules are:
 - If you think it is too dark, increase AO Direct by 0.1, e.g. 0.8 0.4.
 - If you think it is a little bit too bright after that, decrease AO Ambient by 0.2, e.g. 0.6 0.4.
 
-<img src="images/Unsym_last_vdw_now_0803_bg.bmp" width="240" /> <img src="images/Unsym_last_vdw_now_0804_bg.bmp" width="240" /> <img src="images/Unsym_last_vdw_now_0604_bg.bmp" width="240" />
+<img src="images/Unsym_last_vdw_now_0803_bg.png" width="240" /> <img src="images/Unsym_last_vdw_now_0804_bg.png" width="240" /> <img src="images/Unsym_last_vdw_now_0604_bg.png" width="240" />
 
 0.8+0.3 (left) 0.8+0.4 (middle) 0.6+0.4 (right)
 
