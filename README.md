@@ -12,13 +12,14 @@ There are some very useful (but also limited) resources online to get yourself r
 1. Official VMD website on Tachyon Rendering [Here](https://www.ks.uiuc.edu/Research/vmd/minitutorials/tachyonao)
 2. "Rendering with Tachyon: a practical guide" by Aksimentiev Group @UIUC [PDF Here](tachyonTutorial.pdf)
 3. Some mailing list discussion: [1][1], [2][2]
+4. John's webpage and guide on Tachyon [Here](http://jedi.ks.uiuc.edu/~johns/raytracer/) [PDF Here](tachyon.pdf)
 
 [1]: http://www.ks.uiuc.edu/Research/vmd/mailing_list/vmd-l/11356.html
 [2]: http://www.ks.uiuc.edu/Research/vmd/mailing_list/vmd-l/17145.html
 
 # The quick and dirty way
 None likes long manuals, so I provide you here the easiest way to go:
-1. (Optional) Change your background to white. `Graphics > Color > Categories:Display > Names:Background > 8 white`
+1. (Optional) Change the background to white. `Graphics > Color > Categories:Display > Names:Background > 8 white`
 2. (Optional) `Display > Orthographic`
 3. (Optional) `Display > Axes > Off`
 4. `Display > uncheck Light 1`
@@ -42,7 +43,7 @@ I found that BlownGlass under GLSL looks pretty nice so one can easily skip the 
 
 <img src="images/snapshot_2_cue_linear.png" width="200" /> <img src="images/tachyon_2_qualitylow_2.png" width="200" />
 
-Snapshot in GLSL (left) Tachyon (right)
+Snapshot+GLSL (left) Tachyon (right)
 
 I bet you can hardly tell the difference between two :)
 
@@ -67,7 +68,7 @@ Ambient 0.5 + Direct 0.5 (left) Ambient 0.8 + Direct 0.5 (middle) Ambient 0.5 + 
 Ambient 0.3 + Direct 0.3 (left) Ambient 0.8 + Direct 0.8 (right)
 
 
-### Shining lights to your system
+### Shining lights into your system
 
 `Display > check/uncheck Light 0-3`
 
@@ -89,7 +90,9 @@ Basically the rules are:
 - If you think it is too dark, increase AO Direct by 0.1, e.g. 0.8 0.4.
 - If you think it is a little bit too bright after that, decrease AO Ambient by 0.2, e.g. 0.6 0.4.
 
-<img src="images/1400px-Unsym_last_vdw_now_0803_bg.bmp.png" width="250" /> <img src="images/1400px-Unsym_last_vdw_now_0804_bg.bmp.png" width="250" /> <img src="images/1400px-Unsym_last_vdw_now_0604_bg.bmp.png" width="250" />
+<img src="images/Unsym_last_vdw_now_0803_bg.bmp" width="240" /> <img src="images/Unsym_last_vdw_now_0804_bg.bmp" width="240" /> <img src="images/Unsym_last_vdw_now_0604_bg.bmp" width="240" />
+
+0.8+0.3 (left) 0.8+0.4 (middle) 0.6+0.4 (right)
 
 ## Transparency
 
